@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { multi } from './data';
-import dataSec from '../assets/sec.json';
+import dataSec  from '../assets/sec.json';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,8 +20,8 @@ export class AppComponent {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Results';
-  yAxisLabel: string = 'Workers';
+  xAxisLabel: string = 'Iterations';
+  yAxisLabel: string = 'Value (ms)';
   timeline: boolean = true;
   resultsSec = dataSec;
 
