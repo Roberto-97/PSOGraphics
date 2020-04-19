@@ -1,13 +1,50 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
   <a class="navbar-brand" href="#">Graphics</a>
 </nav>
-<div class="col-10 flex-column mt-4 ml-auto mr-auto" id="bodyPage">
-  <h1 class="title">Particle Swarn Optimization</h1>
-  <div class="psoSec">
-    <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
-      [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
-      [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="resultsSec" (select)="onSelect($event)"
-      (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
-    </ngx-charts-line-chart>
+<div class="row">
+  <div class="col-lg-7 col-md-7 col-sm-7 flex-column mt-4 ml-auto mr-auto" id="bodyPage">
+    <h1 class="title">Particle Swarn Optimization</h1>
+    <div class="row">
+      <div class="psoSec">
+        <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="resultQuadric" (select)="onSelect($event)"
+          (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+        </ngx-charts-line-chart>
+      </div>
+      <div class="psoSec">
+        <ngx-charts-line-chart [view]="view" [scheme]="colorScheme"  [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="resultRastrigin" (select)="onSelect($event)"
+          (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="psoSec">
+        <ngx-charts-line-chart [view]="view" [scheme]="colorScheme"  [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="resultSpherical" (select)="onSelect($event)"
+          (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+        </ngx-charts-line-chart>
+      </div>
+      <div class="psoSec">
+        <ngx-charts-line-chart [view]="view" [scheme]="colorScheme"  [legend]="legend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="resultAckley" (select)="onSelect($event)"
+          (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 flex-column mt-4 ml-auto mr-auto" id="bodyPage">
+    <h1 class="title">Particle Swarn Optimization</h1>
+    <div class="psoSec">
+      <ejs-chart style='display:block' id='chartcontainer' [primaryXAxis]='primaryXAxis'>
+        <e-series-collection>
+          <e-series [dataSource]='data' type='BoxAndWhisker' xName='x' yName='y'> </e-series>
+        </e-series-collection>
+      </ejs-chart>
+    </div>
   </div>
 </div>

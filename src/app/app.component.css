@@ -12,6 +12,10 @@
     border: 1px solid #e3e3e3;
 }
 
+#chartcontainer {
+ margin-bottom: 2em;
+}
+
 .title {
     text-align: center;
 }
